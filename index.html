@@ -3,16 +3,89 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PartyPuzl</title>
+  <title>logang-bot apps</title>
+  <meta name="description" content="Apps by logang-bot, with each app's privacy policy and a contact address.">
   <style>
-    body { margin: 0; padding: 48px 16px; font-family: system-ui, sans-serif; background: #fff8f1; color: #1b2a33; text-align: center; }
-    a { color: #127f8c; }
+    :root {
+      --bg: #fff8f1;
+      --card: #ffffff;
+      --text: #1b2a33;
+      --muted: #5b6b74;
+      --border: #eadfd3;
+      --link: #127f8c;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12191d;
+        --card: #1b2429;
+        --text: #e8eef1;
+        --muted: #9aaab3;
+        --border: #2a363d;
+        --link: #5cc6d2;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 48px 16px 64px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+    }
+    main { max-width: 640px; margin: 0 auto; }
+    h1 { font-size: 1.8rem; margin: 0 0 4px; }
+    h2 { font-size: 1.1rem; margin: 40px 0 12px; }
+    p { margin: 0 0 12px; }
+    .lead { color: var(--muted); }
+    a { color: var(--link); }
+    .app {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 12px;
+    }
+    .app h3 { margin: 0 0 4px; font-size: 1.15rem; }
+    .app p { color: var(--muted); }
+    .links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0; padding: 0; list-style: none; }
+    footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; }
   </style>
 </head>
 <body>
-  <h1>PartyPuzl</h1>
-  <p>A party game for friends.</p>
-  <p><a href="https://play.google.com/store/apps/details?id=com.restrusher.partypuzl">Get it on Google Play</a></p>
-  <p><a href="/partypuzl-legal/privacy-policy.html">Privacy policy</a></p>
+  <main>
+    <header>
+      <h1>logang-bot</h1>
+      <p class="lead">Independent developer of mobile games and apps.</p>
+    </header>
+
+    <section aria-labelledby="apps-heading">
+      <h2 id="apps-heading">Apps</h2>
+
+      <!--
+        One <article class="app"> per app. Each app keeps its own privacy policy, because each
+        policy describes that app's data. New apps: put the policy at /<app-name>/privacy-policy.html
+        in this repo. PartyPuzl's lives in the separate partypuzl-legal repo, which GitHub Pages
+        serves under this same domain; its URL is registered in Play Console, so it stays put.
+      -->
+      <article class="app">
+        <h3>PartyPuzl</h3>
+        <p>A party game for adults: truth or dare, trivia, sticky dares and mini-games. No account needed.</p>
+        <ul class="links">
+          <li><a href="https://play.google.com/store/apps/details?id=com.restrusher.partypuzl">Google Play</a></li>
+          <li><a href="/partypuzl-legal/privacy-policy.html">Privacy policy</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>Questions about an app, its privacy policy or your data: <a href="mailto:logangch8v@gmail.com">logangch8v@gmail.com</a></p>
+    </section>
+
+    <footer>
+      <p>This site lists every app published by this developer and hosts the shared <a href="/app-ads.txt">app-ads.txt</a>.</p>
+    </footer>
+  </main>
 </body>
 </html>
