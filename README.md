@@ -10,6 +10,7 @@ serves it at <https://logang-bot.github.io/>.
 | `index.html` | Developer page: who publishes the apps, the list of apps, a contact address |
 | `app-ads.txt` | Authorised ad sellers. Ad networks only read it from the **root** of the website listed on the Play store listing, so it can only live in this repo. One file covers every app on the account |
 | `<app-name>/privacy-policy.html` | Each new app's privacy policy |
+| `google1e30460a0ee048b1.html` | Google Search Console ownership proof, which Play Console uses to verify the developer website. Google re-checks it periodically, so **never delete or rename it** |
 
 ## Adding an app
 
